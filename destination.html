@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            /* Using a custom property to get rid of the height of the address bar on mobile phones. This way, the footer is stuck on the bottom of the page and is
+             * not hidden because of the address bar of browsers.
+             Reference: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+            document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            window.addEventListener('resize', () => {
+                document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            });
+        </script>
+        <script defer src="script/script.js"></script>
+        <title>Destinations</title>
+    </head>
+    <body class="destination-content">
+        <div class="main-container">
+            <header class="main-header">
+                <a class="header__logo" href="index.html"><img src="assets/shared/logo.svg" alt="logo" /></a>
+
+                <input id="checkbox-right-menu" type="checkbox" />
+                <label class="header__label" for="checkbox-right-menu">
+                    <img class="open-right-menu-icon" src="assets/shared/icon-hamburger.svg" alt="logo" />
+                    <img class="close-right-menu-icon" src="assets/shared/icon-close.svg" alt="logo" />
+                </label>
+                <nav class="navigation-menu navigation-menu--header">
+                    <div class="header-separator">
+                        <div class="separator"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="home-link" href="index.html">
+                                <span class="navigation-text navigation-text--index">00</span><span class="navigation-text">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="destination-link" href="destination.html">
+                                <span class="navigation-text navigation-text--index">01</span><span class="navigation-text">destination</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="crew-link" href="crew.html">
+                                <span class="navigation-text navigation-text--index">02</span><span class="navigation-text">crew</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tech-link" href="technology.html">
+                                <span class="navigation-text navigation-text--index">03</span><span class="navigation-text">technology</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main-content">
+                <div class="main-title"><span class="heading-5 heading-5--index">01</span><h1 class="heading-5">pick your destination</h1></div>
+                <div class="pictures-container" data-targets-container>
+                    <picture data-source-target="moon">
+                        <img class="destination-hero" alt="moon" src="assets/destination/image-moon.png" />
+                    </picture>
+                    <picture class="hidden-target-tab" data-source-target="mars">
+                        <img class="destination-hero" alt="mars" src="assets/destination/image-mars.png" />
+                    </picture>
+                    <picture class="hidden-target-tab" data-source-target="europe">
+                        <img class="destination-hero" alt="europe" src="assets/destination/image-europa.png" />
+                    </picture>
+                    <picture class="hidden-target-tab" data-source-target="titan">
+                        <img class="destination-hero" alt="titan" src="assets/destination/image-titan.png" />
+                    </picture>
+                </div>
+                <nav class="navigation-menu navigation-menu--destination">
+                    <ul data-tabContainer>
+                        <li><a data-tab="moon" class="selected-tab"><span class="navigation-text">moon</span></a></li>
+                        <li><a data-tab="mars" ><span class="navigation-text">mars</span></a></li>
+                        <li><a data-tab="europe" ><span class="navigation-text">europe</span></a></li>
+                        <li><a data-tab="titan" ><span class="navigation-text">titan</span></a></li>
+                    </ul>
+                </nav>
+                <div class="destinations" data-targets-container>
+                    <article data-source-target="moon">
+                        <h2 class="heading-2">moon</h2>
+                        <p class="default-paragraph">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                        <div class="separator"></div>
+                        <div class="destination-info">
+                            <div>
+                                <div class="subheading-2">avg. distance</div>
+                                <div class="subheading-1">384,400 KM</div>
+                            </div>
+                            <div>
+                                <div class="subheading-2">est. travel time</div>
+                                <div class="subheading-1">3 days</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hidden-target-tab" data-source-target="mars">
+                        <h2 class="heading-2">mars</h2>
+                        <p class="default-paragraph">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+                        <div class="separator"></div>
+                        <div class="destination-info">
+                            <div>
+                                <div class="subheading-2">avg. distance</div>
+                                <div class="subheading-1">225 MIL. km</div>
+                            </div>
+                            <div>
+                                <div class="subheading-2">est. travel time</div>
+                                <div class="subheading-1">9 months</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hidden-target-tab" data-source-target="europe">
+                        <h2 class="heading-2">europa</h2>
+                        <p class="default-paragraph">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+                        <div class="separator"></div>
+                        <div class="destination-info">
+                            <div>
+                                <div class="subheading-2">avg. distance</div>
+                                <div class="subheading-1">628 MIL. km</div>
+                            </div>
+                            <div>
+                                <div class="subheading-2">est. travel time</div>
+                                <div class="subheading-1">3 years</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hidden-target-tab" data-source-target="titan">
+                        <h2 class="heading-2">titan</h2>
+                        <p class="default-paragraph">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+                        <div class="separator"></div>
+                        <div class="destination-info">
+                            <div>
+                                <div class="subheading-2">avg. distance</div>
+                                <div class="subheading-1">1.6 BIL. km</div>
+                            </div>
+                            <div>
+                                <div class="subheading-2">est. travel time</div>
+                                <div class="subheading-1">7 years</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

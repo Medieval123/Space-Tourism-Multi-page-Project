@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            /* Using a custom property to get rid of the height of the address bar on mobile phones. This way, the footer is stuck on the bottom of the page and is
+             * not hidden because of the address bar of browsers.
+             Reference: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+            document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            window.addEventListener('resize', () => {
+                document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            });
+        </script>
+        <script defer src="script/script.js"></script>
+
+        <title>Crew</title>
+    </head>
+    <body class="crew-content">
+        <div class="main-container">
+            <header class="main-header">
+                <a class="header__logo" href="index.html"><img src="assets/shared/logo.svg" alt="logo" /></a>
+
+                <input id="checkbox-right-menu" type="checkbox" />
+                <label class="header__label" for="checkbox-right-menu">
+                    <img class="open-right-menu-icon" src="assets/shared/icon-hamburger.svg" alt="logo" />
+                    <img class="close-right-menu-icon" src="assets/shared/icon-close.svg" alt="logo" />
+                </label>
+                <nav class="navigation-menu navigation-menu--header">
+                    <div class="header-separator">
+                        <div class="separator"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="home-link" href="index.html">
+                                <span class="navigation-text navigation-text--index">00</span><span class="navigation-text">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="destination-link" href="destination.html">
+                                <span class="navigation-text navigation-text--index">01</span><span class="navigation-text">destination</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="crew-link" href="crew.html">
+                                <span class="navigation-text navigation-text--index">02</span><span class="navigation-text">crew</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tech-link" href="technology.html">
+                                <span class="navigation-text navigation-text--index">03</span><span class="navigation-text">technology</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main-content">
+                <div class="main-title"><span class="heading-5 heading-5--index">02</span><h1 class="heading-5">meet your crew</h1></div>
+                <div class="pictures-container" data-targets-container>
+                    <picture data-source-target="commander">
+                        <img class="crew-hero" alt="Douglas Hurley" src="assets/crew/image-douglas-hurley.png" />
+                    </picture>
+                    <picture class="hidden-target-tab" data-source-target="specialist">
+                        <img class="crew-hero" alt="Mark SHuttleworth" src="assets/crew/image-mark-shuttleworth.png" />
+                    </picture>
+                    <picture class="hidden-target-tab" data-source-target="pilot">
+                        <img class="crew-hero" alt="Victor Glover" src="assets/crew/image-victor-glover.png" />
+                    </picture>
+                    <picture class="hidden-target-tab" data-source-target="engineer">
+                        <img class="crew-hero" alt="Anousheh Ansari" src="assets/crew/image-anousheh-ansari.png" />
+                    </picture>
+                </div>
+
+                <nav class="navigation-menu navigation-menu--crew">
+                    <ul data-tabContainer>
+                        <li><a data-tab="commander" class="selected-tab"></a></li>
+                        <li><a data-tab="specialist"></a></li>
+                        <li><a data-tab="pilot"></a></li>
+                        <li><a data-tab="engineer"></a></li>
+                    </ul>
+                </nav>
+                <section class="crew-descriptions" data-targets-container>
+                    <article class="crew-member-description" data-source-target="commander">
+                        <h4 class="heading-4 heading-4--crew-member-title">commander</h4>
+                        <h3 class="heading-3">douglas hurley</h3>
+                        <p class="default-paragraph">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                    </article>
+                    <article class="crew-member-description hidden-target-tab" data-source-target="specialist">
+                        <h4 class="heading-4 heading-4--crew-member-title">Mission Specialist</h4>
+                        <h3 class="heading-3">Mark SHuttleworth</h3>
+                        <p class="default-paragraph">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+                    </article>
+                    <article class="crew-member-description hidden-target-tab" data-source-target="pilot">
+                        <h4 class="heading-4 heading-4--crew-member-title">pilot</h4>
+                        <h3 class="heading-3">Victor Glover</h3>
+                        <p class="default-paragraph">Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+                    </article>
+                    <article class="crew-member-description hidden-target-tab" data-source-target="engineer">
+                        <h4 class="heading-4 heading-4--crew-member-title">Flight Engineer</h4>
+                        <h3 class="heading-3">Anousheh Ansari</h3>
+                        <p class="default-paragraph">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

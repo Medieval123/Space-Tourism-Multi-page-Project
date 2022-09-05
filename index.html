@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            /* Using a custom property to get rid of the height of the address bar on mobile phones. This way, the footer is stuck on the bottom of the page and is
+             * not hidden because of the address bar of browsers.
+             Reference: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+            document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            window.addEventListener('resize', () => {
+                document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            });
+        </script>
+
+        <title>Space Tourism</title>
+    </head>
+    <body class="home-content">
+        <div class="main-container">
+            <header class="main-header">
+                <a class="header__logo" href="index.html"><img src="assets/shared/logo.svg" alt="logo" /></a>
+
+                <input id="checkbox-right-menu" type="checkbox" />
+                <label class="header__label" for="checkbox-right-menu">
+                    <img class="open-right-menu-icon" src="assets/shared/icon-hamburger.svg" alt="logo" />
+                    <img class="close-right-menu-icon" src="assets/shared/icon-close.svg" alt="logo" />
+                </label>
+                <nav class="navigation-menu navigation-menu--header">
+                    <div class="header-separator">
+                        <div class="separator"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="home-link" href="index.html">
+                                <span class="navigation-text navigation-text--index">00</span><span class="navigation-text">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="destination-link" href="destination.html">
+                                <span class="navigation-text navigation-text--index">01</span><span class="navigation-text">destination</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="crew-link" href="crew.html">
+                                <span class="navigation-text navigation-text--index">02</span><span class="navigation-text">crew</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tech-link" href="technology.html">
+                                <span class="navigation-text navigation-text--index">03</span><span class="navigation-text">technology</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main-content">
+                <div class="main-title"><span class="heading-5">so, you want to travel to</span></div>
+                <div class="home-text">
+                    <h1 class="heading-1">space</h1>
+                    <p class="default-paragraph">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+                </div>
+                <a href="destination.html" class="explore-home-moon">Explore <br> <br> Godspeed!</a>
+            </main>
+        </div>
+    </body>
+</html>
