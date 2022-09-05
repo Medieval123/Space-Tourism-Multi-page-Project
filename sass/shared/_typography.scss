@@ -1,0 +1,151 @@
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-5--index, .navigation-text, .subheading-1, .subheading-2 {
+    text-transform: uppercase;
+}
+
+.main-title {
+    @include flex-centered-items;
+    column-gap: 2.7rem;
+    margin-bottom: 4.1rem;
+}
+
+.heading-5, .navigation-text, .subheading-2  {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.navigation-text {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 2.7px;
+}
+
+.navigation-text--index {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.heading-1 {
+    font-size: 10rem;
+}
+
+.heading-2 {
+    font-size: 7rem;
+}
+
+.heading-3, .heading-1, .heading-2, .heading-4, .subheading-1 {
+    font-family: 'Bellefair', sans-serif;
+}
+
+.heading-3 {
+    font-size: 3rem;
+}
+
+.heading-4 {
+    font-size: 2rem;
+}
+
+.heading-5 {
+    font-size: 2rem;
+    letter-spacing: 2.7px;
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .navigation-text {
+    color: var(--color-white);
+    font-weight: 400;
+}
+
+.heading-5--index {
+    opacity: 0.25;
+    font-weight: 700;
+}
+
+.subheading-1 {
+    font-size: 3.5rem;
+    color: var(--color-white);
+}
+
+.subheading-2 {
+    font-size: 1.4rem;
+    letter-spacing: 2.35px;
+    color: var(--light-grey);
+}
+
+.default-paragraph {
+    color: var(--light-grey);
+    line-height: 1.7;
+    max-width: var(--paragraph-maximum-width);
+}
+
+.header-title-section {
+    margin-bottom: 4.1rem;
+}
+
+.home-content {
+    .header-title-section {
+        margin-bottom: 4.3rem;
+    }
+}
+
+@media only screen and (min-width: $minWidthTabletPortrait)
+{
+    .main-title {
+        justify-content: start;
+        margin-bottom: 8rem;
+    }
+
+    .heading-1 {
+        font-size: 18.75rem;
+    }
+
+    .heading-2 {
+        font-size: 10rem;
+    }
+
+    .heading-3 {
+        font-size: 5rem;
+    }
+
+    .heading-4 {
+        font-size: 3rem;
+    }
+
+    .heading-5 {
+        font-size: 2.5rem;
+        letter-spacing: 3.38px;
+    }
+
+    .navigation-text {
+        letter-spacing: 2.36px;
+    }
+}
+
+@media only screen and (min-width: $minWidthDesktop)
+{
+    .heading-1 {
+        font-size: 15rem;
+    }
+
+    .heading-3 {
+        font-size: 5.6rem;
+    }
+    
+    .heading-4 {
+        font-size: 3.2rem;
+    }
+
+    .heading-5 {
+        font-size: 2.8rem;
+        letter-spacing: 4.72px;
+    }
+
+    .subheading-1 {
+        font-size: 2.8rem;
+    }
+
+    .subheading-2 {
+        font-size: 1.4rem;
+    }
+
+    .navigation-text {
+        font-size: 1.6rem;
+    }
+}

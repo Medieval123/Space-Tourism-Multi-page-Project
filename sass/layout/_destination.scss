@@ -1,0 +1,170 @@
+.destination-content {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+
+    .pictures-container {
+        margin-bottom: 3rem;
+        .destination-hero {
+            width: 37%;
+        }
+    }
+
+    .destinations {
+        article {
+            display: grid;
+            justify-items: center;
+            .heading-2 {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .navigation-menu.navigation-menu--destination {
+        margin-bottom: 3.75rem;
+
+        ul {
+            @include flex-centered-items;
+            column-gap: 3.5rem;
+            row-gap: 0;
+            flex-direction: row;
+
+            a:not(.selected-tab) {
+                .navigation-text {
+                    color: var(--light-grey);
+                }
+            }
+
+            a.selected-tab::after {
+                background-color: var(--color-white);
+            }
+        }
+    }
+
+    .destination-info {
+        display: flex;
+        gap: 5.37rem;
+        flex-wrap: wrap;
+        padding: 0 3rem;
+        justify-content: center;
+
+        .subheading-2 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .separator {
+        margin: 4rem 0;
+        justify-self: stretch;
+    }
+
+    @media only screen and (min-width: $minWidthTabletPortrait) {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+
+        .navigation-menu.navigation-menu--header {
+            a.destination-link::after {
+                background-color: var(--color-white) !important;
+                display: block;
+            }
+        }
+
+        .navigation-menu.navigation-menu--destination {
+            .navigation-text {
+                letter-spacing: 2.7px;
+            }
+        }
+
+        .pictures-container {
+            .destination-hero {
+                width: 44%;
+            }
+        }
+
+        .destinations {
+            .destination-info {
+                gap: 12.5rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthSmallDesktop) { 
+        background-image: url("../assets/destination/background-destination-desktop.jpg");
+        
+        .main-container {
+            .main-content {
+                grid-template-columns: auto auto;
+                grid-template-rows: repeat(3, auto);
+                grid-template-areas: "titleDest ."
+                                     "heroDest  destinationNav"
+                                     "heroDest  destinationText";
+                column-gap: 5rem;
+
+                .pictures-container {
+                    grid-area: heroDest;
+                    padding-top: 0;
+                    align-self: start;
+                    margin-bottom: 0;
+                    .destination-hero {
+                        margin-left: 6rem;
+                        width: 85%;
+                    }
+                }
+
+                .navigation-menu.navigation-menu--destination {
+                    grid-area: destinationNav;
+                    ul {
+                        justify-content: start;
+                    }
+                }
+
+                .destinations {
+                    grid-area: destinationText;
+                    padding: 0;
+                    margin:0;
+                    text-align: left;
+
+                    article {
+                        justify-items: start;
+                        .destination-info {
+                            gap: 7.7rem;
+                            padding: 0;
+                            justify-content: start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthDesktop) {
+        .main-container {
+
+            .main-content {
+                column-gap: 15rem;
+                align-content: center;
+                .main-title {
+                    grid-area: titleDest;
+                }
+                
+                .pictures-container {
+                    align-self: center;
+                    .destination-hero {
+                        width: 85%;
+                    }
+                }
+                
+                .destinations {
+                    width: 65%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthBigDesktop) {
+        .main-container {
+            .main-content {
+                .destinations {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+:root {
+    --default-transition-time: 0.3s;
+    --color-white: #fff;
+    --color-black: #0B0D17;
+    --light-grey: #D0D6F9;
+    --color-separator: #383B4B;
+    --border-bottom-link-width: 3px;
+    --border-bottom-link-hover-color: rgba(255, 255, 255, 0.5);
+    --color-bullets: #464950;
+    --color-bullets-hover: #85868b;
+    --padding-main-elements: 3rem; /* The horizontal padding that the main elements (header, main...) will have*/
+    --padding-bottom-main-container: 3rem;
+    --paragraph-maximum-width: 75rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;  /*1 rem = 8px;*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.87rem;
+    text-align: center;
+    line-height: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding-bottom: var(--padding-bottom-main-container);
+    align-content: start;
+
+    .main-content {
+        display: grid;
+        padding: 0 var(--padding-main-elements);
+    }
+}
+
+@media only screen and (min-width: $minWidthTabletPortrait) {
+
+    :root {
+        --padding-main-elements: 5rem;
+        --padding-bottom-main-container: 6rem;
+        --paragraph-maximum-width: 87.5rem;
+    }
+
+    body {
+        font-size: 2rem;
+    }
+
+    .main-container {
+        row-gap: 4.87rem;
+    }
+}
+
+@media only screen and (min-width: $minWidthSmallDesktop) {
+
+    :root {
+        --paragraph-maximum-width: 80rem;
+        --left-offset: 3rem; /* A left offset to help the aligment to the left of thin line in the header and the main content*/
+    }
+
+    html {
+        font-size: 62.5%; /*1 rem = 10px*/
+    }
+
+    body {
+        font-size: 1.8rem;
+    }
+
+    .main-container {
+        grid-template-rows: 9.6rem 1fr;
+        padding: 4rem 0 7rem 0;
+        row-gap: 8.2rem;
+    }
+}
+
+@media only screen and (min-width: $minWidthDesktop) {
+
+    :root {
+        --grid-header-main-container: 11rem 1fr; /* This grid will be used both in the header and in the main container to have their content aligned. */
+    }
+
+    .main-container {
+        grid-template-columns: var(--grid-header-main-container);
+        grid-template-areas: "header header"
+                             ".      main";
+
+        .main-content {
+            padding-left: var(--left-offset);
+            grid-area: main;
+        }
+    }
+}
+
+
+@media only screen and (min-width: $minWidthBigDesktop) {
+
+    .main-container {
+        grid-template-columns: 1fr minmax(auto, 160rem) 1fr;
+        grid-template-areas: "header header header"
+                             ".      main   .";
+
+        .main-content{
+            padding: 0;
+        }
+    }
+}

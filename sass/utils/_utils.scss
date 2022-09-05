@@ -1,0 +1,14 @@
+@mixin flex-centered-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    height: 1px;
+    background-color: var(--color-separator);
+}
+
+.hidden-target-tab {
+    display: none !important;
+}

@@ -1,0 +1,190 @@
+.main-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12.5rem;
+    padding: 0rem var(--padding-main-elements);
+
+    .header__logo img{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #checkbox-right-menu {
+        display: none;
+    }
+
+    .header__label {
+        z-index: 4;
+    }
+
+    #checkbox-right-menu:checked ~ .header__label .open-right-menu-icon {
+        display: none;
+    }
+
+    #checkbox-right-menu:checked ~ .header__label .close-right-menu-icon {
+        display: block;
+    }
+
+    .open-right-menu-icon {
+        width: 3rem;
+        height: 2.62rem;
+        cursor: pointer;
+    }
+
+    .close-right-menu-icon {
+        display: none;
+        width: 2.38rem;
+        height: 2.38rem;
+        cursor: pointer;
+    }
+
+    .navigation-menu.navigation-menu--header {
+        position: absolute;
+        right: 0;
+        width: 32rem;
+        min-height: 100%;
+        top: 0;
+        backdrop-filter: blur(15px);
+        z-index: 3;
+        transform: translateX(100%);
+        transition: transform var(--default-transition-time);
+        padding: 15rem 0 0 3rem;
+
+        .header-separator {
+            display: none;
+        }
+
+        ul {
+            li {
+                a:hover::after {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    #checkbox-right-menu:checked ~ .navigation-menu.navigation-menu--header {
+        transform: translateX(0);
+    }
+
+
+    @media only screen and (min-width: $minWidthTabletPortrait) {
+
+        padding-right: 0;
+        .header__logo img{
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .header__label
+        {
+            display: none;
+        }
+
+        #checkbox-right-menu:checked ~ .navigation-menu.navigation-menu--header {
+            transform: none;
+        }
+
+        .navigation-menu.navigation-menu--header {
+            @include flex-centered-items;
+            justify-content: end;
+            position: static;
+            min-height: auto;
+            backdrop-filter: none;
+            z-index: auto;
+            transform: none;
+            transition: none;
+            padding: 0rem;
+            width: auto;
+
+            ul {
+                width: 56.25rem;
+                background-color: #151923;
+                flex-direction: row;
+                justify-content: space-evenly;
+                row-gap: 0;
+                li {
+                    a {
+                        padding: 5.37rem 0;
+                        .navigation-text {
+                            font-size: 1.75rem;
+                        }
+
+                        .navigation-text--index {
+                            display: none;
+                        }
+                    }
+
+                    a:hover::after {
+                        background-color: var(--border-bottom-link-hover-color);
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthSmallDesktop) {
+        height: auto;
+        .header__logo {
+            img{
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+        }
+
+        .navigation-menu.navigation-menu--header {
+            align-self: stretch;
+            flex-grow: 1;
+            .header-separator {
+                flex-grow: 1;
+                position: relative;
+                display: block;
+                .separator {
+                    width: 100%;
+                    position: absolute;
+                    left: var(--left-offset);
+                    z-index: 2;
+                    margin: 0;
+                }
+            }
+
+            ul {
+                padding: 0 17rem 0 12.2rem;
+                width: 83rem;
+                justify-content: space-between;
+                align-self: stretch;
+                background-color: rgba(255, 255, 255, 0.04);
+                backdrop-filter: blur(1.5rem);
+                li {
+                    a {
+                        column-gap: 1.3rem;
+                        padding: 0;
+
+                        .navigation-text--index {
+                            display: initial;
+                        }
+
+                        .navigation-text {
+                            font-size: 1.6rem;
+                            letter-spacing: 2.7px;
+                            font-variant-numeric: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthDesktop) {
+        display: grid;
+        grid-template-columns: var(--grid-header-main-container);
+        padding-left: 0;
+        grid-area: header;
+
+        .header__logo {
+            padding-left: 2rem;
+        }
+    }
+}

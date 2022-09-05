@@ -1,0 +1,169 @@
+.home-content {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+
+    .main-container {
+        row-gap: 3rem;
+        .main-content {
+            align-content: start;
+            .main-title {
+                margin-bottom: 4.3rem;
+                .heading-5 {
+                    color: var(--light-grey);
+                }
+            }
+
+            .home-text {
+                margin-bottom: 10.7rem;
+                .heading-1 {
+                    margin-bottom: 6rem;
+                }
+            }
+            .explore-home-moon {
+                width: 18.75rem;
+                height: 18.75rem;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-color: #fff;
+                text-transform: uppercase;
+                color: #0B0D17;
+                letter-spacing: 1.25px;
+                font-size: 2.5rem;
+                font-family: 'Bellefair', sans-serif;
+                @include flex-centered-items;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthTabletPortrait) {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+
+        .main-container {
+            row-gap: 15rem;
+
+            .navigation-menu.navigation-menu--header {
+                a.home-link::after {
+                    background-color: var(--color-white) !important;
+                    display: block;
+                }
+            }
+
+            .main-content {
+                grid-template-columns: fit-content(60%);
+                justify-content: center;
+                .main-title {
+                    justify-content: center;
+                }
+
+                .home-text {
+                    margin-bottom: 20.5rem;
+                }
+
+                
+                .explore-home-moon {
+                    width: 30.25rem;
+                    height: 30.25rem;
+                    font-size: 4rem;
+                    letter-spacing: 2px;
+                    box-shadow: 0px 0px 0px 90px transparent;
+                }
+
+
+                .explore-home-moon:hover {
+                    box-shadow: 0 0 0 10.8rem rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthSmallDesktop) {
+        background-image: url("../assets/home/background-home-desktop.jpg");
+        background-position: center center;      
+
+        .main-container {
+            row-gap: 10rem;
+
+            .main-content {
+                width: 95%;
+                grid-template-columns: auto auto;
+                grid-template-areas: "title     ."
+                                     "text       hero";
+                padding-right: 0;
+                justify-content: normal;
+                row-gap: 0;
+
+                .main-title {
+                    grid-area: title;
+                    justify-self: start;
+                }
+
+                .home-text {
+                    display: grid;
+                    grid-area: text;
+                    text-align: left;
+                    margin-bottom: 0;
+
+                    .heading-1 {
+                        margin-bottom: 3.5rem;
+                    }
+                    
+                    .default-paragraph {
+                        width: 80%;
+                    }
+                }
+
+                .explore-home-moon {
+                    grid-area: hero;
+                    align-self: end;
+                    width: 20rem;
+                    height: 20rem;
+                    font-size: 2.2rem;
+                }
+
+                .main-title, .home-text {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthDesktop) {
+
+        .main-container {
+            row-gap: 24.8rem;
+            .main-content {
+                width: 85%;
+                .home-text {
+                    grid-template-columns: min(56%, 70rem);
+                    .default-paragraph {
+                        width: auto;
+                    }
+                }
+
+                .explore-home-moon {
+                    width: 27.4rem;
+                    height: 27.4rem;
+                    font-size: 3.2rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $minWidthBigDesktop) {
+        .main-container {
+            .main-content{
+                width: auto;
+                grid-template-columns: 4fr 2fr;
+                column-gap: 22rem;
+
+                .home-text {
+                    grid-template-columns: auto;
+                }
+                
+                .explore-home-moon {
+                    justify-self: start;
+                }
+            }
+        }
+    }
+}
+
