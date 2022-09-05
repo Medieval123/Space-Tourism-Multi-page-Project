@@ -1,4 +1,4 @@
-# Frontend Mentor - Space tourism website solution
+# Frontend Mentor - Space tourism multi-page project
 
 This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/hebrerillo/space-tourism-challenge
-- Live Site URL: https://tourism-space-challenge.netlify.app/index.html
+- Solution URL: https://github.com/Medieval123/Space-Tourism-Multi-page-Project
+- Live Site URL: https://space-tourism-multipage-project01.netlify.app
 
 ## My process
 
@@ -50,25 +50,12 @@ Users should be able to:
 - Mobile-first workflow
 - Sass
 
-### What I learned
-
-I learned how to center a grid item that has a maximum width:
-    - https://codepen.io/hebrerillo/pen/rNvNPRo
-    - https://codepen.io/hebrerillo/pen/xxWYvqZ
-
-Besides the media queries defined in Figma, I added two more media queries to strengthen my layout skills:
-    - A media query for small desktops with a min-width of 1024px.
-    - A media query for big desktops with a min-width of 1700px.
-    
-For normal desktops (min-width: 1440px), the main content and the thin bar on the header are aligned to the left, as specified in the Figma file.
-
-If you hover over the links in navigation menu of the header, you will realize that the links only occupy the necessary height, they do not stretch to the bottom of the navigation menu to show the border bottom when hovering. I achieved this using pseudo elements.
 
 This project was also a good opportunity to improve my Sass skills.
 
 ### Continued development
 
-I think I still have to improve the layout of responsive and flexible images.
+ I still have to improve the layout of responsive and flexible images.
 
 
 ### Useful resources
@@ -78,9 +65,6 @@ I think I still have to improve the layout of responsive and flexible images.
 
 ## Author
 
-- Frontend Mentor - [hebrerillo] https://www.frontendmentor.io/profile/hebrerillo 
+- Frontend Mentor - [Olabiyi Judah] https://www.frontendmentor.io/profile/Medieval123 
 
 
-## Acknowledgments
-
-As always, I want to thank the Mozilla Developer Network for the great documentation they provide on HTML, CSS and JavaScript, but also for the very good articles they write about such technologies.
